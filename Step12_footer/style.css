@@ -1,0 +1,283 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Étape 4 : corps de la page ---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Conteneur principal (étape 12 : fond blanc, sans bordure) */
+.container {
+    background: #fff;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    border: none;
+    max-width: 1100px;
+}
+
+/* Footer (étape 12 : bordure désactivée) */
+footer {
+    background: #CCCCCC;
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+/* ---------- Étape 4 : barre de navigation ---------- */
+.main-nav {
+    display: flex;
+    justify-content: space-between;     /* espacée horizontalement */
+    align-items: center;                /* centrée verticalement */
+    height: 60px;
+    padding: 20px 0;
+    font-size: 13px;
+    background: #fff;
+    border: none;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;                   /* sans puces */
+}
+
+.main-nav .main-menu {
+    flex: 1;                            /* prend toute la largeur disponible */
+    margin-left: 20px;
+}
+
+.main-nav li {
+    padding: 0 10px;                    /* 10px de séparation entre éléments */
+}
+
+.main-nav a {
+    color: #262626;
+    text-decoration: none;
+    padding-bottom: 2px;                /* léger espace sous le texte */
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    border-bottom: 2px solid #000;      /* bordure noire au survol */
+}
+
+.main-nav .logo {
+    width: 110px;
+}
+
+/* ---------- Étape 5 : showcase ---------- */
+.showcase {
+    display: flex;
+    flex-direction: column;             /* contenu en colonne */
+    align-items: center;                /* centré horizontalement */
+    justify-content: flex-end;          /* aligné en bas */
+    width: 100%;
+    height: 400px;
+    padding: 50px 0;                    /* espacement vertical */
+    margin-bottom: 20px;
+    background: #fff url('../img/slide1.png') no-repeat center top;
+    background-size: 30%;
+    background-origin: content-box;     /* image limitée à la zone de contenu */
+    border: none;
+}
+
+.showcase h2,
+.showcase p {
+    margin-bottom: 10px;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #378ff5;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Conteneur sombre : texte blanc + bouton clair */
+.dark {
+    color: #fff;
+}
+
+.dark .btn {
+    background: #03254c;
+    color: #fff;
+}
+
+/* ---------- Étapes 6 et 8 : home-cards (grille de 4 colonnes) ---------- */
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+    background: #fff;
+    width: auto;
+    border: none;
+}
+
+.home-cards img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.home-cards h3 {
+    margin-bottom: 5px;
+}
+
+.home-cards a {
+    display: inline-block;
+    padding-top: 10px;
+    color: #0067b8;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-cards a:hover i {
+    margin-left: 10px;                  /* l'icône se décale vers la droite */
+}
+
+/* ---------- Étape 7 : showcase Big Data ---------- */
+#bigData-intro {
+    height: 350px;
+    margin-bottom: 20px;
+    padding-bottom: 100px;
+    background: #fff url('../img/bigData.png') no-repeat center;
+    background-size: cover;
+    border: none;
+}
+
+#bigData-intro .content {
+    width: 40%;
+    color: #262626;
+    padding: 50px 0 0 30px;
+}
+
+#bigData-intro p {
+    margin: 10px 0 20px;
+}
+
+/* ---------- Étape 9 : ruban ---------- */
+.ruban {
+    width: 100%;
+    height: 350px;
+    background: url('../img/carbon2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center 78.5%;  /* image décalée vers le haut */
+    border: none;
+}
+
+.ruban .content {
+    width: 55%;
+    color: #fff;
+    padding: 80px 0 0 30px;
+}
+
+.ruban p {
+    margin: 10px 0 20px;
+}
+
+/* ---------- Étape 10 : follow ---------- */
+.follow {
+    display: flex;
+    align-items: center;                /* centrés verticalement */
+    justify-content: flex-start;        /* alignés à gauche */
+    background: #fff;
+}
+
+.follow * {
+    margin-right: 10px;
+}
+
+.follow span {
+    color: #000;
+    font-size: 30px;
+}
+
+/* ---------- Étape 11 : liens du pied de page ---------- */
+.links {
+    background: #f2f2f2;
+    color: #616161;
+    padding: 35px 0;
+    height: auto;
+    font-size: 12px;
+    border: none;
+}
+
+.links-inner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.links li {
+    list-style: none;
+    line-height: 2.8;
+}
+
+.links a {
+    color: #262626;
+    text-decoration: none;
+}
+
+/* ---------- Étape 12 : sous-footer ---------- */
+.sub-footer {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    border: none;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-inner div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-inner div i {
+    margin-right: 10px;
+}
+
+.sub-footer ul {
+    display: flex;
+    list-style: none;
+}
+
+.sub-footer li {
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.sub-footer a {
+    color: #262626;
+    text-decoration: none;
+}
